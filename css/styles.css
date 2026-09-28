@@ -28,13 +28,18 @@ body {
   flex-direction: column;
 }
 
-/* Soft Boca Raton beach scene, fixed behind the page (a pseudo-element keeps it smooth on iOS) */
+/* Mizner Park photo, fixed behind the page (a pseudo-element keeps it smooth on iOS).
+   Layers, top to bottom: FAU-blue tint for readability, the photo, and the illustrated
+   beach scene as a fallback if the photo can't load. */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
+  --photo: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mizner_Park_Boca_June_2010_Palms.jpg/1920px-Mizner_Park_Boca_June_2010_Palms.jpg");
   background:
+    linear-gradient(180deg, rgba(0, 37, 74, 0.30) 0%, rgba(0, 37, 74, 0.12) 45%, rgba(0, 37, 74, 0.45) 100%),
+    var(--photo) center 30% / cover no-repeat,
     url("../assets/boca-beach.svg") center bottom / cover no-repeat,
     var(--bg);
   pointer-events: none;
@@ -233,6 +238,15 @@ main { flex: 1; }
   color: var(--muted);
 }
 
+/* Keep messages readable over the background photo */
+.status:not(:empty) {
+  width: fit-content;
+  max-width: 100%;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
 .status.error { color: var(--fau-red); font-weight: 600; }
 
 /* Cards */
@@ -408,13 +422,17 @@ main { flex: 1; }
   margin-top: 12px;
 }
 
-.site-footer p { margin: 0; padding: 16px 0; }
+.site-footer p { margin: 0; padding: 16px 0 0; }
+.site-footer p:last-child { padding-bottom: 16px; }
+.site-footer .photo-credit { font-size: 0.78rem; color: #b8c7da; padding-top: 6px; }
 .site-footer a { color: #fff; }
 
 /* Responsive */
 @media (max-width: 720px) {
-  /* Narrow screens crop the scene; show the lifeguard stand and a palm instead of open water */
-  body::before { background-position: 85% bottom, 0 0; }
+  /* Smaller photo for phones */
+  body::before {
+    --photo: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mizner_Park_Boca_June_2010_Palms.jpg/960px-Mizner_Park_Boca_June_2010_Palms.jpg");
+  }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .daily li {
     grid-template-columns: 70px 32px 1fr;

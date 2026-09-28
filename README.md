@@ -72,4 +72,9 @@ To host the logo yourself, save the file into `assets/` and change the `src` of 
 ## Credits
 
 Weather data by [Open-Meteo.com](https://open-meteo.com/), licensed under CC BY 4.0.
+
+Background photo: [Mizner Park, Boca Raton](https://commons.wikimedia.org/wiki/File:Mizner_Park_Boca_June_2010_Palms.jpg)
+by Infrogmation of New Orleans, [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/), loaded from Wikimedia Commons.
+If it can't load, the illustrated beach scene in `assets/boca-beach.svg` is shown instead.
+
 This is a student project for ISM 4421 and is not an official FAU website.
