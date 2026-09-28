@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+  <!-- Soft Boca Raton beach: Atlantic sunrise, palms, and a pastel lifeguard stand -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4eef7"/>
+      <stop offset="0.75" stop-color="#f6efe6"/>
+      <stop offset="1" stop-color="#fbe8d2"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe2b0" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#ffd9a3" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffd9a3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ec5d6"/>
+      <stop offset="1" stop-color="#b9e0e3"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4e6cb"/>
+      <stop offset="1" stop-color="#ecd9b4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1060" cy="560" r="190" fill="url(#sun)"/>
+  <circle cx="1060" cy="560" r="46" fill="#ffe7bf" opacity="0.9"/>
+
+  <!-- Clouds -->
+  <g fill="#ffffff" opacity="0.7">
+    <ellipse cx="300" cy="300" rx="120" ry="22"/>
+    <ellipse cx="360" cy="286" rx="70" ry="20"/>
+    <ellipse cx="1300" cy="250" rx="140" ry="20"/>
+    <ellipse cx="1240" cy="238" rx="70" ry="18"/>
+    <ellipse cx="760" cy="380" rx="90" ry="14"/>
+  </g>
+
+  <!-- Gulls -->
+  <g fill="none" stroke="#7d8fa3" stroke-width="3" stroke-linecap="round" opacity="0.55">
+    <path d="M560 330 q12 -10 24 0 q12 -10 24 0"/>
+    <path d="M620 360 q9 -8 18 0 q9 -8 18 0"/>
+    <path d="M1420 390 q10 -9 20 0 q10 -9 20 0"/>
+  </g>
+
+  <!-- Atlantic -->
+  <rect y="600" width="1600" height="140" fill="url(#sea)"/>
+  <rect x="1010" y="600" width="100" height="140" fill="#fff3dc" opacity="0.35"/>
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" opacity="0.55" stroke-width="3">
+    <path d="M80 632 q30 -8 60 0 t60 0"/>
+    <path d="M430 650 q30 -8 60 0 t60 0 t60 0"/>
+    <path d="M840 628 q30 -8 60 0 t60 0"/>
+    <path d="M1250 660 q30 -8 60 0 t60 0 t60 0"/>
+    <path d="M200 690 q30 -8 60 0 t60 0"/>
+    <path d="M980 700 q30 -8 60 0 t60 0"/>
+  </g>
+
+  <!-- Sailboat on the horizon -->
+  <g opacity="0.6">
+    <path d="M700 596 l0 -44 l30 44 z" fill="#ffffff"/>
+    <path d="M697 552 l0 44 l-18 0 z" fill="#f3f3f3"/>
+    <path d="M672 598 h64 l-8 8 h-48 z" fill="#5b7a99"/>
+  </g>
+
+  <!-- Surf line and sand -->
+  <path d="M0 735 C 200 718, 380 752, 600 734 S 1000 716, 1200 736 S 1480 752, 1600 732 L1600 900 L0 900 Z" fill="#ffffff" opacity="0.8"/>
+  <path d="M0 748 C 220 732, 400 764, 620 746 S 1020 730, 1220 750 S 1490 762, 1600 744 L1600 900 L0 900 Z" fill="url(#sand)"/>
+
+  <!-- Pastel lifeguard stand -->
+  <g transform="translate(1210 700)">
+    <g stroke="#b99b76" stroke-width="5" stroke-linecap="round">
+      <line x1="10" y1="40" x2="4" y2="112"/>
+      <line x1="70" y1="40" x2="76" y2="112"/>
+      <line x1="10" y1="80" x2="70" y2="80"/>
+    </g>
+    <path d="M-6 42 l96 0 l0 10 l-96 0 z" fill="#d8c1a0"/>
+    <rect x="6" y="2" width="68" height="40" rx="3" fill="#9fd8d0"/>
+    <rect x="18" y="12" width="20" height="18" fill="#ffffff" opacity="0.85"/>
+    <rect x="46" y="12" width="18" height="30" fill="#f6b5a7"/>
+    <path d="M-4 4 L40 -20 L84 4 Z" fill="#f6b5a7"/>
+    <line x1="40" y1="-20" x2="40" y2="-48" stroke="#8a97a8" stroke-width="3"/>
+    <path d="M40 -48 l22 7 l-22 7 z" fill="#cc0000" opacity="0.8"/>
+  </g>
+
+  <!-- Beach umbrella and towel -->
+  <g transform="translate(420 780)" opacity="0.85">
+    <line x1="0" y1="0" x2="10" y2="70" stroke="#a88e6c" stroke-width="4"/>
+    <path d="M-60 12 Q-2 -40 58 -4 Z" fill="#ffffff"/>
+    <path d="M-60 12 Q-30 -22 -2 -18 L0 4 Z" fill="#003366" opacity="0.75"/>
+    <path d="M22 -14 Q42 -12 58 -4 L0 4 Z" fill="#cc0000" opacity="0.7"/>
+    <rect x="30" y="58" width="80" height="24" rx="3" fill="#f6b5a7" opacity="0.8" transform="rotate(-4 70 70)"/>
+  </g>
+
+  <!-- Palms: left -->
+  <g fill="#3f6f63" opacity="0.8">
+    <path d="M120 900 C 128 800, 150 700, 196 612 L 206 616 C 164 704, 146 804, 142 900 Z"/>
+    <g transform="translate(200 612)">
+      <path d="M0 0 C -40 -30, -100 -30, -140 10 C -100 -10, -50 -8, 0 0 Z"/>
+      <path d="M0 0 C -30 -50, -80 -80, -130 -70 C -80 -56, -40 -34, 0 0 Z"/>
+      <path d="M0 0 C 10 -50, 50 -90, 100 -96 C 60 -70, 30 -40, 0 0 Z"/>
+      <path d="M0 0 C 40 -30, 100 -34, 150 0 C 100 -14, 50 -10, 0 0 Z"/>
+      <path d="M0 0 C 30 10, 80 40, 104 90 C 70 54, 34 30, 0 0 Z"/>
+      <path d="M0 0 C -30 10, -70 40, -90 86 C -60 50, -30 26, 0 0 Z"/>
+    </g>
+    <path d="M40 900 C 44 830, 58 760, 84 700 L 92 703 C 70 764, 58 834, 58 900 Z"/>
+    <g transform="translate(88 700) scale(0.7)">
+      <path d="M0 0 C -40 -30, -100 -30, -140 10 C -100 -10, -50 -8, 0 0 Z"/>
+      <path d="M0 0 C -20 -50, -60 -84, -110 -86 C -66 -60, -34 -32, 0 0 Z"/>
+      <path d="M0 0 C 20 -50, 60 -84, 110 -86 C 66 -60, 34 -32, 0 0 Z"/>
+      <path d="M0 0 C 40 -30, 100 -30, 140 10 C 100 -10, 50 -8, 0 0 Z"/>
+      <path d="M0 0 C 30 10, 70 40, 90 86 C 60 50, 30 26, 0 0 Z"/>
+    </g>
+  </g>
+
+  <!-- Palms: right -->
+  <g fill="#3f6f63" opacity="0.8">
+    <path d="M1490 900 C 1484 800, 1462 690, 1418 590 L 1408 594 C 1448 694, 1466 802, 1468 900 Z"/>
+    <g transform="translate(1414 590)">
+      <path d="M0 0 C 40 -30, 100 -30, 140 10 C 100 -10, 50 -8, 0 0 Z"/>
+      <path d="M0 0 C 30 -50, 80 -80, 130 -70 C 80 -56, 40 -34, 0 0 Z"/>
+      <path d="M0 0 C -10 -50, -50 -90, -100 -96 C -60 -70, -30 -40, 0 0 Z"/>
+      <path d="M0 0 C -40 -30, -100 -34, -150 0 C -100 -14, -50 -10, 0 0 Z"/>
+      <path d="M0 0 C -30 10, -80 40, -104 90 C -70 54, -34 30, 0 0 Z"/>
+      <path d="M0 0 C 30 10, 70 40, 90 86 C 60 50, 30 26, 0 0 Z"/>
+    </g>
+  </g>
+</svg>

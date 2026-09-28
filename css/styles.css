@@ -5,7 +5,7 @@
   --fau-red: #cc0000;
   --fau-red-dark: #a30000;
   --fau-silver: #cccccc;
-  --bg: #eef2f7;
+  --bg: #e4eef7;
   --card: #ffffff;
   --text: #1b2433;
   --muted: #5b6678;
@@ -26,6 +26,18 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* Soft Boca Raton beach scene, fixed behind the page (a pseudo-element keeps it smooth on iOS) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    url("../assets/boca-beach.svg") center bottom / cover no-repeat,
+    var(--bg);
+  pointer-events: none;
 }
 
 main { flex: 1; }
@@ -401,6 +413,8 @@ main { flex: 1; }
 
 /* Responsive */
 @media (max-width: 720px) {
+  /* Narrow screens crop the scene; show the lifeguard stand and a palm instead of open water */
+  body::before { background-position: 85% bottom, 0 0; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .daily li {
     grid-template-columns: 70px 32px 1fr;
