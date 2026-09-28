@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Owl Weather | FAU Boca Raton</title>
+  <meta name="description" content="Florida Atlantic University themed weather app powered by the free Open-Meteo API. Defaults to FAU's Boca Raton campus.">
+  <meta name="theme-color" content="#003366">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://api.open-meteo.com">
+  <link rel="preconnect" href="https://geocoding-api.open-meteo.com">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Owl Weather home">
+        <img
+          class="brand-logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Florida_Atlantic_University_logo.svg"
+          alt="Florida Atlantic University"
+          width="140" height="60">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">Owl Weather</span>
+          <span class="brand-sub">Go Owls!</span>
+        </span>
+      </a>
+      <div class="unit-toggle" role="group" aria-label="Temperature units">
+        <button type="button" data-unit="fahrenheit" aria-pressed="true">°F</button>
+        <button type="button" data-unit="celsius" aria-pressed="false">°C</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="search-bar" aria-label="Search location">
+      <form id="search-form" autocomplete="off">
+        <label for="search-input" class="visually-hidden">Search for a city</label>
+        <input id="search-input" type="search" placeholder="Search a city (e.g. Jupiter, Miami, Tampa)" aria-autocomplete="list" aria-controls="search-results">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <div class="quick-actions">
+        <button type="button" id="btn-fau" class="btn btn-ghost">FAU Boca Raton</button>
+        <button type="button" id="btn-geo" class="btn btn-ghost">Use my location</button>
+      </div>
+      <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <section id="current" class="card current" aria-label="Current conditions" hidden>
+      <div class="current-main">
+        <div>
+          <h1 id="place-name" class="place-name"></h1>
+          <p id="updated" class="muted"></p>
+        </div>
+        <div class="current-temp-wrap">
+          <span id="current-icon" class="wx-icon big" aria-hidden="true"></span>
+          <div>
+            <div id="current-temp" class="current-temp"></div>
+            <div id="current-desc" class="current-desc"></div>
+          </div>
+        </div>
+      </div>
+      <dl class="stats">
+        <div><dt>Feels like</dt><dd id="stat-feels"></dd></div>
+        <div><dt>High / Low</dt><dd id="stat-hilo"></dd></div>
+        <div><dt>Humidity</dt><dd id="stat-humidity"></dd></div>
+        <div><dt>Wind</dt><dd id="stat-wind"></dd></div>
+        <div><dt>Rain chance</dt><dd id="stat-precip"></dd></div>
+        <div><dt>UV index</dt><dd id="stat-uv"></dd></div>
+        <div><dt>Sunrise</dt><dd id="stat-sunrise"></dd></div>
+        <div><dt>Sunset</dt><dd id="stat-sunset"></dd></div>
+      </dl>
+    </section>
+
+    <section id="hourly-section" class="card" aria-labelledby="hourly-title" hidden>
+      <h2 id="hourly-title" class="section-title">Next 24 hours</h2>
+      <ol id="hourly" class="hourly"></ol>
+    </section>
+
+    <section id="daily-section" class="card" aria-labelledby="daily-title" hidden>
+      <h2 id="daily-title" class="section-title">7-day forecast</h2>
+      <ol id="daily" class="daily"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0).
+        Built for ISM 4421 at Florida Atlantic University. Not an official FAU website.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
